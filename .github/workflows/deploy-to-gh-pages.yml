@@ -20,6 +20,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -28,7 +33,7 @@ jobs:
         REACT_APP_OPEN_WEATHER_API_KEY: ${{secrets.REACT_APP_OPEN_WEATHER_API_KEY}}
         REACT_APP_TRELLO_API_KEY: ${{secrets.REACT_APP_TRELLO_API_KEY}}
         REACT_APP_TRELLO_API_TOKEN: ${{secrets.REACT_APP_TRELLO_API_TOKEN}}
-        DISABLE_ESLINT_PLUGIN: true
+        DISABLE_ESLINT_PLUGIN: 'true'
     - run: yarn
     - run: yarn build
     
