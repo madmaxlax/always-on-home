@@ -5,6 +5,7 @@ import React from 'react';
 import { CustomTheme } from '../theme';
 import { ClassNameProps } from '../utils/types';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const useStyles = makeStyles((theme: CustomTheme) => ({
   circularProgressRoot: {},
 }));

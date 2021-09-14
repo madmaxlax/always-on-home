@@ -50,6 +50,7 @@ interface TrelloCard {
 }
 
 //for full json response https://trello.com/b/FgrSihcE/groceries.json
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface TrelloResponse {
   actions: Array<{ [name: string]: unknown }>;
   cards: Array<TrelloCard>;
@@ -65,7 +66,9 @@ interface TrelloResponse {
   }>;
 }
 export const GroceryList = (props: ClassNameProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { className } = props;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const classes = useStyles();
   const [showAll, setShowAll] = useState(false);
   const [groceryData, setGroceryData] = useState<Array<TrelloCard>>([]);

@@ -29,7 +29,9 @@ interface SubwayData {
 
 const ACE_LINE = '8th Av - Fulton St';
 export const NextSubway = (props: NextSubwayProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { className, location } = props;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const classes = useStyles();
   const [subwayData, setSubwayData] = useState<Partial<SubwayData>>({});
 

@@ -33,6 +33,7 @@ const convertKtoF = (kelvin?: number) => {
   return fahrenheit;
 };
 export const TodaysWeather = (props: ClassNameProps & { zip?: number }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { className, zip = 10019 } = props;
   const [weatherData, setWeatherData] = useState<Partial<CurrentWeatherResponse>>({});
   const fetchNewWeather = () => {
