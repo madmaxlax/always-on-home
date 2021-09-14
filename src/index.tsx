@@ -1,3 +1,5 @@
+import 'react-app-polyfill/stable';
+import 'whatwg-fetch';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import React from 'react';
