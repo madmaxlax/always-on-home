@@ -17,7 +17,13 @@ jobs:
       matrix:
         node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    env: 
+      PUBLIC_URL: 'always-on-home/'
+      REACT_APP_OPEN_WEATHER_API_KEY: ${{secrets.REACT_APP_OPEN_WEATHER_API_KEY}}
+      REACT_APP_TRELLO_API_KEY: ${{secrets.REACT_APP_TRELLO_API_KEY}}
+      REACT_APP_TRELLO_API_TOKEN: ${{secrets.REACT_APP_TRELLO_API_TOKEN}}
+      DISABLE_ESLINT_PLUGIN: 'true'
+      ESLINT_NO_DEV_ERRORS: 'true'
     steps:
     - uses: actions/checkout@v2
     - uses: actions/cache@v2
@@ -29,13 +35,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      env: 
-        PUBLIC_URL: 'always-on-home/'
-        REACT_APP_OPEN_WEATHER_API_KEY: ${{secrets.REACT_APP_OPEN_WEATHER_API_KEY}}
-        REACT_APP_TRELLO_API_KEY: ${{secrets.REACT_APP_TRELLO_API_KEY}}
-        REACT_APP_TRELLO_API_TOKEN: ${{secrets.REACT_APP_TRELLO_API_TOKEN}}
-        DISABLE_ESLINT_PLUGIN: 'true'
-        ESLINT_NO_DEV_ERRORS: 'true'
+
     - run: yarn
     - run: yarn build
     
