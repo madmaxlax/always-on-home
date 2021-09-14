@@ -79,10 +79,10 @@ export const GroceryList = (props: ClassNameProps) => {
       const cards = (await data.json()) as Array<TrelloCard>;
       setGroceryData(cards?.filter((card) => card.idList === '611ab9702b68a509a8047f4f' && !card.closed) || []);
     });
+    setTimeout(fetchTrelloGroceries, 60 * 60 * 10000);
   };
   useEffect(() => {
     fetchTrelloGroceries();
-    setTimeout(fetchTrelloGroceries, 3600000);
   }, []);
 
   return (

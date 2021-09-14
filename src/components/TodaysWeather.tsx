@@ -45,10 +45,10 @@ export const TodaysWeather = (props: ClassNameProps & { zip?: number }) => {
     ).then(async (data) => {
       setWeatherData(await data.json());
     });
+    setTimeout(fetchNewWeather, 60 * 60 * 1000);
   };
   useEffect(() => {
     fetchNewWeather();
-    setTimeout(fetchNewWeather, 3600000);
   }, []);
   return (
     <CardWidget onClick={fetchNewWeather} title={`Weather for ${weatherData.name || ''}`}>
@@ -57,8 +57,12 @@ export const TodaysWeather = (props: ClassNameProps & { zip?: number }) => {
           <CustomCircularProgress text={'Loading Weather'} />
         ) : (
           <>
-            Current: {convertKtoF(weatherData?.main?.temp)}&deg;,{'  '}Feels like:{' '}
-            {convertKtoF(weatherData?.main?.feels_like)}&deg;
+            Current: {convertKtoF(weatherData?.main?.temp)}&deg;
+            {weatherData?.main?.temp !== weatherData?.main?.feels_like && (
+              <span>
+                ,{'  '}Feels like: {convertKtoF(weatherData?.main?.feels_like)}&deg;
+              </span>
+            )}
             <br />
             High: {convertKtoF(weatherData?.main?.temp_max)}&deg;
             <br />

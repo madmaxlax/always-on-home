@@ -15,6 +15,7 @@
     "clsx": "latest",
     "core-js": "2.6.10",
     "intl": "^1.2.5",
+    "moment": "^2.29.1",
     "mta-realtime-subway-departures": "^1.2.0",
     "raf": "^3.4.1",
     "react": "latest",

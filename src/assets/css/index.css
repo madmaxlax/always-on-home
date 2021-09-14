@@ -16,3 +16,126 @@ a:focus {
 .flex-grow {
   flex-grow: 1 !important;
 }
+
+h1 {
+  font-family: raleway;
+}
+
+span.sub_icon,
+label.sub_icon {
+  width: 1.3em;
+  height: 1.3em;
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  border-radius: 5em;
+  float: left;
+  margin: 1px;
+  font-family: Helvetica;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+span.sub_iconY,
+label.sub_icon {
+  width: 1.3em;
+  height: 1.3em;
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  border-radius: 5em;
+  float: left;
+  margin: 5px;
+  font-family: Helvetica;
+  font-weight: 500;
+  padding: 1px;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+}
+
+span.sub_icon._J {
+  background: #8f5a00;
+}
+
+span.sub_icon._Z {
+  background: #8f5a00;
+}
+
+span.sub_icon._B {
+  background: #fe8f00;
+}
+
+span.sub_icon._D {
+  background: #fe8f00;
+}
+span.sub_icon._M {
+  background: #fe8f00;
+}
+span.sub_icon._F {
+  background: #fe8f00;
+}
+
+span.sub_iconY._N {
+  background: #ffea00;
+}
+
+span.sub_iconY._R {
+  background: #ffea00;
+}
+
+span.sub_iconY._Q {
+  background: #ffea00;
+}
+
+span.sub_icon._A {
+  background: #2a36b1;
+}
+
+span.sub_icon._C {
+  background: #2a36b1;
+}
+
+span.sub_icon._E {
+  background: #2a36b1;
+}
+
+span.sub_icon._4 {
+  background: #0a8f08;
+}
+
+span.sub_icon._5 {
+  background: #0a8f08;
+}
+
+span.sub_icon._6 {
+  background: #0a8f08;
+}
+
+span.sub_icon._1 {
+  background: #e51c23;
+}
+
+span.sub_icon._2 {
+  background: #e51c23;
+}
+
+span.sub_icon._3 {
+  background: #e51c23;
+}
+
+span.sub_icon._L {
+  background: #757575;
+}
+
+span.sub_icon._S {
+  background: #757575;
+}
+
+span.sub_icon._7 {
+  background: #d500f9;
+}
+
+span.sub_icon._G {
+  background: #42bd41;
+}
