@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "always-on-home/static/css/main.1dd31610.chunk.css",
-    "main.js": "always-on-home/static/js/main.f90e882a.chunk.js",
-    "main.js.map": "always-on-home/static/js/main.f90e882a.chunk.js.map",
-    "runtime-main.js": "always-on-home/static/js/runtime-main.13745ad4.js",
-    "runtime-main.js.map": "always-on-home/static/js/runtime-main.13745ad4.js.map",
-    "static/js/2.03935273.chunk.js": "always-on-home/static/js/2.03935273.chunk.js",
-    "static/js/2.03935273.chunk.js.map": "always-on-home/static/js/2.03935273.chunk.js.map",
-    "index.html": "always-on-home/index.html",
-    "static/css/main.1dd31610.chunk.css.map": "always-on-home/static/css/main.1dd31610.chunk.css.map",
-    "static/js/2.03935273.chunk.js.LICENSE.txt": "always-on-home/static/js/2.03935273.chunk.js.LICENSE.txt"
+    "main.css": "/always-on-home/static/css/main.1dd31610.chunk.css",
+    "main.js": "/always-on-home/static/js/main.cc8b5435.chunk.js",
+    "main.js.map": "/always-on-home/static/js/main.cc8b5435.chunk.js.map",
+    "runtime-main.js": "/always-on-home/static/js/runtime-main.8be4e007.js",
+    "runtime-main.js.map": "/always-on-home/static/js/runtime-main.8be4e007.js.map",
+    "static/js/2.051fe1a0.chunk.js": "/always-on-home/static/js/2.051fe1a0.chunk.js",
+    "static/js/2.051fe1a0.chunk.js.map": "/always-on-home/static/js/2.051fe1a0.chunk.js.map",
+    "index.html": "/always-on-home/index.html",
+    "static/css/main.1dd31610.chunk.css.map": "/always-on-home/static/css/main.1dd31610.chunk.css.map",
+    "static/js/2.051fe1a0.chunk.js.LICENSE.txt": "/always-on-home/static/js/2.051fe1a0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.13745ad4.js",
-    "static/js/2.03935273.chunk.js",
+    "static/js/runtime-main.8be4e007.js",
+    "static/js/2.051fe1a0.chunk.js",
     "static/css/main.1dd31610.chunk.css",
-    "static/js/main.f90e882a.chunk.js"
+    "static/js/main.cc8b5435.chunk.js"
   ]
 }
