@@ -118,7 +118,6 @@ export const GroceryList = (props: ClassNameProps) => {
           <Grid container spacing={1}>
             {groceryData.map((card, index) => {
               const hasFunEmoji = knownEmojis.filter((emoji) => card.name.toLowerCase().includes(emoji[0]));
-              console.log(hasFunEmoji);
               return showAll || index < listLimit ? (
                 <Grid item xs={6} key={index}>
                   {hasFunEmoji.length ? (
