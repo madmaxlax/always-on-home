@@ -1,3 +1,5 @@
+import { Grid } from '@material-ui/core';
+import { AddShoppingCart, ShoppingBasket } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
 import React, { useEffect, useState } from 'react';
 import { CustomTheme } from '../theme';
@@ -65,6 +67,16 @@ interface TrelloResponse {
     softLimit: string;
   }>;
 }
+const knownEmojis = [
+  ['spinach', '🍃'],
+  ['bananas', '🍌'],
+  ['chicken', '🐓'],
+  ['eggs', '🍳🥚'],
+  ['avocado', '🥑'],
+  ['pizza', '🍕'],
+  ['bread', '🍞'],
+];
+const listLimit = 9;
 export const GroceryList = (props: ClassNameProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { className } = props;
@@ -73,6 +85,7 @@ export const GroceryList = (props: ClassNameProps) => {
   const [showAll, setShowAll] = useState(false);
   const [groceryData, setGroceryData] = useState<Array<TrelloCard>>([]);
   const fetchTrelloGroceries = () => {
+    setGroceryData([]);
     fetch(
       `https://api.trello.com/1/lists/611ab9702b68a509a8047f4f/cards?key=${process.env.REACT_APP_TRELLO_API_KEY}&token=${process.env.REACT_APP_TRELLO_API_TOKEN}`
     ).then(async (data) => {
@@ -91,6 +104,10 @@ export const GroceryList = (props: ClassNameProps) => {
       onClick={() => {
         setShowAll(!showAll);
       }}
+      action={() => {
+        fetchTrelloGroceries();
+      }}
+      icon={AddShoppingCart}
     >
       {!groceryData?.length ? (
         <CustomCircularProgress text="loading trello data" />
@@ -98,11 +115,26 @@ export const GroceryList = (props: ClassNameProps) => {
         <>
           {groceryData.length || 0} items
           <br />
-          <ul>
-            {groceryData.map((card, index) =>
-              (showAll || index) < 5 ? <li key={index}>{card.name}</li> : index === 5 ? <li key={index}>...</li> : null
-            )}
-          </ul>
+          <Grid container spacing={1}>
+            {groceryData.map((card, index) => {
+              const hasFunEmoji = knownEmojis.filter((emoji) => card.name.toLowerCase().includes(emoji[0]));
+              console.log(hasFunEmoji);
+              return showAll || index < listLimit ? (
+                <Grid item xs={6} key={index}>
+                  {hasFunEmoji.length ? (
+                    hasFunEmoji[0][1]
+                  ) : (
+                    <ShoppingBasket fontSize="small" color="secondary" sx={{ verticalAlign: 'middle' }} />
+                  )}{' '}
+                  {card.name}
+                </Grid>
+              ) : index === listLimit ? (
+                <Grid item xs={6} key={index}>
+                  ...click to see all
+                </Grid>
+              ) : null;
+            })}
+          </Grid>
         </>
       )}
     </CardWidget>
